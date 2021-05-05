@@ -22,11 +22,3 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Free Trial(1)(f8b823f5-59dd-4701-960c-a073da1c9101)'
-    appType: 'webAppLinux'
-    WebAppName: 'vjecproject'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    RuntimeStack: 'PHP|7.3'
