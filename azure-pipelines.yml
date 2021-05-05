@@ -1,4 +1,12 @@
 # PHP
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(1)(f8b823f5-59dd-4701-960c-a073da1c9101)'
+    appType: 'webAppLinux'
+    WebAppName: 'vjecproject'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'PHP|7.3'
 # Test and package your PHP application.
 # Add steps that run tests, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/php
